@@ -1,0 +1,5 @@
+D:/myWorks/devtalk/cmp2_3/out/build/debugGCC/CMakeFiles/edit_cache.dir
+D:/myWorks/devtalk/cmp2_3/out/build/debugGCC/CMakeFiles/rebuild_cache.dir
+D:/myWorks/devtalk/cmp2_3/out/build/debugGCC/src/CMakeFiles/hello_main.dir
+D:/myWorks/devtalk/cmp2_3/out/build/debugGCC/src/CMakeFiles/edit_cache.dir
+D:/myWorks/devtalk/cmp2_3/out/build/debugGCC/src/CMakeFiles/rebuild_cache.dir

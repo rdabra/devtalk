@@ -1,0 +1,49 @@
+{
+   "version": 2,
+   "configurePresets": [
+      {
+         "name": "debugGCC",
+         "displayName": "GCC(debug)",
+         "description": "Using compilers: gcc, g++",
+         "generator": "Ninja",
+         "binaryDir": "${sourceDir}/out/build/${presetName}",
+         "cacheVariables": {
+            "CMAKE_INSTALL_PREFIX": "${sourceDir}/out/install/${presetName}",
+            "CMAKE_C_COMPILER": "gcc",
+            "CMAKE_CXX_COMPILER": "g++",
+            "CMAKE_CXX_FLAGS": "-O0 -g",
+            "CMAKE_BUILD_TYPE": "Debug"
+         }
+      },
+      {
+         "name": "releaseGCC",
+         "displayName": "GCC(Release)",
+         "description": "Using compilers: gcc, g++",
+         "generator": "Ninja",
+         "binaryDir": "${sourceDir}/out/build/${presetName}",
+         "cacheVariables": {
+            "CMAKE_INSTALL_PREFIX": "${sourceDir}/out/install/${presetName}",
+            "CMAKE_C_COMPILER": "gcc",
+            "CMAKE_CXX_COMPILER": "g++",
+            "CMAKE_CXX_FLAGS": "-Ofast",
+            "CMAKE_BUILD_TYPE": "Release"
+         }
+      }
+   ],
+   "buildPresets": [
+      {
+         "name": "debugGCC",
+         "description": "",
+         "displayName": "GCC(Debug)",
+         "jobs": 8,
+         "configurePreset": "debugGCC"
+      },
+      {
+         "name": "releaseGCC",
+         "description": "",
+         "displayName": "GCC(Release)",
+         "jobs": 8,
+         "configurePreset": "releaseGCC"
+      }
+   ]
+}
