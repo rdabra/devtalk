@@ -1,0 +1,47 @@
+{
+    "version": 2,
+    "configurePresets": [
+        {
+            "name": "debugGFort",
+            "displayName": "GFortran(debug)",
+            "description": "Using compiler gfortran",
+            "generator": "Ninja",
+            "binaryDir": "${sourceDir}/out/build/${presetName}",
+            "cacheVariables": {
+                "CMAKE_INSTALL_PREFIX": "${sourceDir}/out/install/${presetName}",
+                "CMAKE_Fortran_COMPILER": "c:/msys64/mingw64/bin/gfortran.exe",
+                "CMAKE_Fortran_FLAGS": "-O0 -std=f95",
+                "CMAKE_BUILD_TYPE": "Debug"
+            }
+        },
+        {
+            "name": "releaseGFort",
+            "displayName": "GFortran(release)",
+            "description": "Using compiler gfortran",
+            "generator": "Ninja",
+            "binaryDir": "${sourceDir}/out/build/${presetName}",
+            "cacheVariables": {
+                "CMAKE_INSTALL_PREFIX": "${sourceDir}/out/install/${presetName}",
+                "CMAKE_Fortran_COMPILER": "c:/msys64/mingw64/bin/gfortran.exe",
+                "CMAKE_Fortran_FLAGS": "-Ofast -std=f95",
+                "CMAKE_BUILD_TYPE": "Release"
+            }
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "debugGFort",
+            "description": "",
+            "displayName": "GFortran(Debug)",
+            "jobs": 8,
+            "configurePreset": "debugGFort"
+        },
+        {
+            "name": "releaseGFort",
+            "description": "",
+            "displayName": "GFortran(Release)",
+            "jobs": 8,
+            "configurePreset": "releaseGFort"
+        }
+    ]
+}
